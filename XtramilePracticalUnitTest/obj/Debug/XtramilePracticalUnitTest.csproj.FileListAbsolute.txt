@@ -1,0 +1,2 @@
+D:\Program Files\Projects\xtramile.practical.test\XtramilePracticalUnitTest\obj\Debug\XtramilePracticalUnitTest.csproj.AssemblyReference.cache
+D:\Program Files\Projects\xtramile.practical.test\XtramilePracticalUnitTest\obj\Debug\XtramilePracticalUnitTest.csproj.CoreCompileInputs.cache

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Program Files\\Projects\\XtramilePractical\\XtramilePractical\\XtramilePractical.csproj": {}
+    "D:\\Program Files\\Projects\\xtramile.practical.test\\XtramilePractical\\XtramilePractical.csproj": {}
   },
   "projects": {
-    "D:\\Program Files\\Projects\\XtramilePractical\\XtramilePractical\\XtramilePractical.csproj": {
+    "D:\\Program Files\\Projects\\xtramile.practical.test\\XtramilePractical\\XtramilePractical.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Program Files\\Projects\\XtramilePractical\\XtramilePractical\\XtramilePractical.csproj",
+        "projectUniqueName": "D:\\Program Files\\Projects\\xtramile.practical.test\\XtramilePractical\\XtramilePractical.csproj",
         "projectName": "XtramilePractical",
-        "projectPath": "D:\\Program Files\\Projects\\XtramilePractical\\XtramilePractical\\XtramilePractical.csproj",
+        "projectPath": "D:\\Program Files\\Projects\\xtramile.practical.test\\XtramilePractical\\XtramilePractical.csproj",
         "packagesPath": "C:\\Users\\HOME\\.nuget\\packages\\",
-        "outputPath": "D:\\Program Files\\Projects\\XtramilePractical\\XtramilePractical\\obj\\",
+        "outputPath": "D:\\Program Files\\Projects\\xtramile.practical.test\\XtramilePractical\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HOME\\AppData\\Roaming\\NuGet\\NuGet.Config",

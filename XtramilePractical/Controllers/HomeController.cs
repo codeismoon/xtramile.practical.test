@@ -90,10 +90,6 @@ namespace XtramilePractical.Controllers
             return Json(cities);
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
