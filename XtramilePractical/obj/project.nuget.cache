@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "3rGIqKzAmaNGXE5I42Pw1ueO730lUhsuZgN/b/BK6kuwH1tp+yvfXv8CUGCwX/r62qUt59bR/zBIqpwfPV91QQ==",
+  "success": true,
+  "projectFilePath": "D:\\Program Files\\Projects\\XtramilePractical\\XtramilePractical\\XtramilePractical.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\HOME\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

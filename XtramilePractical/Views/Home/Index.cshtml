@@ -1,0 +1,66 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    var country = ViewData["Countries"] as List<string>;
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    @Html.DropDownList("CountryName", new SelectList(country), "Select a Country", new { @class = "form-control", @id="countryDropdown" })
+
+
+    <select id="cityDropdown" name="CityName" class="form-control"></select>
+</div>
+<div class="text-center" id="weatherResult"></div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#countryDropdown').change(function () {
+            var countryName = $(this).val();
+            var cityDropdown = $('#cityDropdown');
+
+            $.get('@Url.Action("GetCities", "Home")', { country: countryName }, function (data) {
+                
+                cityDropdown.empty();
+
+                
+                $.each(data, function (index, item) {
+                    cityDropdown.append($('<option>').val(item).text(item));
+                });
+            }).fail(function () {
+                console.error('Error fetching city data');
+            });
+        });
+    });
+        $('#cityDropdown').change(function () {
+            var selectedCity = $(this).val();
+            $.get('https://localhost:5001/api/location/weather?city=' + selectedCity, function (data) {
+                const location = data.location;
+                const time = data.time;
+                const wind = data.wind;
+                const visibility = data.visibility;
+                const skyCondition = data.skyCondition;
+                const temperatureCelsius = data.temperatureCelsius;
+                const temperatureFahrenheit = data.temperatureFahrenheit;
+                const dewPoint = data.dewPoint;
+                const relativeHumidity = data.relativeHumidity;
+                const pressure = data.pressure;
+
+                const weatherContent = `
+                                <h2>Weather Information for ${location}</h2>
+                                <p>Time: ${time}</p>
+                                <p>Wind: ${wind} m/s</p>
+                                <p>Visibility: ${visibility} meters</p>
+                                <p>Sky Condition: ${skyCondition}</p>
+                                <p>Temperature: ${temperatureCelsius} °C (${temperatureFahrenheit} °F)</p>
+                                <p>Dew Point: ${dewPoint} °C</p>
+                                <p>Relative Humidity: ${relativeHumidity}%</p>
+                                <p>Pressure: ${pressure} hPa</p>
+                            `;
+
+                $('#weatherResult').html(weatherContent);
+            }).fail(function () {
+                    console.error('Error fetching weather data');
+            });
+        });
+</script>
